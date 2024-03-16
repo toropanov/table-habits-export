@@ -8,9 +8,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "parse-markdown-metadata": "^1.0.8"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "author": "Your Name",
   "license": "MIT"
 }
