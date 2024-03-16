@@ -21,13 +21,13 @@ async function readFileIfExists(filename) {
   try {
     return await readFile(filename, 'utf8');
   } catch (error) {
-    console.log({ filename, error })
     return await '';
   }
 }
 
-habits.forEach(async ({ records, name }) => {
+habits.forEach(async ({ records, name, status }) => {
   await delay(500);
+  if (status !== 1) return;
   for (const { create_t, record_value: recordValue, record_type: recordType } of records) {
     await delay(500);
     const date = new Date(create_t * 1000);
@@ -54,14 +54,11 @@ habits.forEach(async ({ records, name }) => {
       const parts = data.split('---');
       const lastIndex = parts.length - 1;
       const text = parts[lastIndex].trim();
-      console.log({ text });
 
       properties[name] = record;
-      console.log({ properties, text });
 
       
       let updatedContent = '';
-      console.log('START UPDATE', updatedContent)
       const propertyKeys = Object.keys(properties);
       if (propertyKeys.length > 0) {
         updatedContent += '---\n';
@@ -72,9 +69,13 @@ habits.forEach(async ({ records, name }) => {
       }
       updatedContent += text.trim();
 
-      console.log('BEFORE UPDATE', updatedContent)
+      console.log('---')
+      console.log('BEFORE UPDATE', text.trim())
+      console.log('---')
 
-      await fs.writeFileSync(absolutePath, updatedContent, { mode: '644' })
+      await delay(500);
+
+      await writeFile(absolutePath, updatedContent, { mode: '644' })
 
       // const stream = fs.createWriteStream(absolutePath, { mode: '0o644' });
       // stream.write(updatedContent);
