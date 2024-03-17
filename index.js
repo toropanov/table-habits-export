@@ -10,8 +10,6 @@ const jsonData = fs.readFileSync(TABLE_HABIT_BACKUP_PATH, 'utf8');
 const { habits } = JSON.parse(jsonData);
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
-const existsSync = util.promisify(fs.existsSync);
-const execPromise = util.promisify(exec);
 
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
