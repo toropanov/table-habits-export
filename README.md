@@ -1,4 +1,4 @@
-## Assign properties to Diary notes based on Table Habit records
+## Assign Table Habit records to Diary notes as markdown properties
 
 After transitioning to Obsidian as my desktop client for journaling, I embarked on enhancing my posts with additional information such as habits, head migrates, steps, food tracking, and more. As part of this process, I utilized the [Table Habit app](https://github.com/FriesI23/mhabit) on Android to monitor habits. Although it doesn't sync directly, it offers export capabilities, which this tool leverages to associate those habits with diary files.
 
