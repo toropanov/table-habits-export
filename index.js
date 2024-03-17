@@ -1,8 +1,9 @@
 import fs from 'fs';
 import util from 'util';
+import 'dotenv/config';
 
-const TABLE_HABIT_BACKUP_PATH = 'data.json';
-const DIARY_PATH = '../../Yandex.Disk.localized/Obsidian/Diary/Data';
+const TABLE_HABIT_BACKUP_PATH = process.env.TABLE_HABIT_BACKUP_PATH;
+const DIARY_PATH = process.env.DIARY_PATH;
 
 const PROPERTIES_BY_PATH = {};
 

@@ -2,7 +2,12 @@
 # yarn lockfile v1
 
 
+dotenv@^16.4.5:
+  version "16.4.5"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.4.5.tgz"
+  integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+
 parse-markdown-metadata@^1.0.8:
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/parse-markdown-metadata/-/parse-markdown-metadata-1.0.8.tgz#0a5f6125b1ce82290a1fa494266b04f20b5b786a"
+  resolved "https://registry.npmjs.org/parse-markdown-metadata/-/parse-markdown-metadata-1.0.8.tgz"
   integrity sha512-NtL8qQs1KLzZKmROg/jtbpRDdJT6J6R+a5c+43UId1LH1bVix13YRkFL4lsJCCNbQ0i8svwHp3tJlWJw5qiZlA==

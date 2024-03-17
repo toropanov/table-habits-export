@@ -8,9 +8,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "parse-markdown-metadata": "^1.0.8"
   },
-  "devDependencies": {},
   "author": "Your Name",
   "license": "MIT"
 }
